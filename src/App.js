@@ -1,15 +1,11 @@
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer'; // now add Footer
+import BookingForm from './components/BookingForm'; // <-- Make sure path is correct
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        Homepage
-      </main>
-      <Footer />
+      <h1>Hello from App!</h1>
+      <BookingForm />
     </div>
   );
 }
