@@ -1,0 +1,4 @@
+.res-form { display:grid; gap: 10px; }
+.res-form__error { color: #b00020; font-weight: 600; }
+.res-form input, .res-form select { padding: 10px; border-radius: 10px; border:
+1px solid #ccc; }

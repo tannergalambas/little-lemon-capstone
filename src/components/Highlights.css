@@ -1,0 +1,3 @@
+.highlights { max-width: var(--max); margin: 40px auto 0; padding: 0 16px; }
+.highlights__head { display:flex; align-items: center; justify-content: spacebetween;
+margin-bottom: 16px; }

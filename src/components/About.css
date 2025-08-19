@@ -1,0 +1,9 @@
+.about { max-width: var(--max); margin: 40px auto; padding: 0 16px; }
+.about__grid { display:grid; grid-template-columns: 1fr; gap: 16px; }
+.about__images { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.about__img { height: 160px; background:#e9ecef; border-radius: 14px; }
+.about__img--offset { transform: translateY(12px); }
+@media (min-width: 900px) {
+.about__grid { grid-template-columns: 1.2fr .8fr; align-items:center; }
+.about__img { height: 220px; }
+}

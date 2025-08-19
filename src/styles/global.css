@@ -1,0 +1,26 @@
+:root { --gap: 16px; --max: 1100px; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sansserif;
+line-height: 1.5; color: #1a1a1a; }
+main { display: block; padding: 24px 16px; }
+.app-shell { display: grid; min-height: 100dvh; grid-template-rows: auto 1fr
+auto; }
+.page { max-width: var(--max); margin: 0 auto; }
+.page--narrow { max-width: 640px; margin: 24px auto; }
+.btn { display: inline-block; padding: 10px 16px; border-radius: 10px;
+background: #f4ce14; border: none; text-decoration: none; color: #1a1a1a; fontweight:
+600; }
+.btn--secondary { background: #495e57; color: #fff; }
+/* cards */
+.card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px
+solid #eee; }
+.card__img { height: 140px; background: #e9ecef; }
+.card__body { padding: 16px; }
+.card__row { display: flex; align-items: baseline; justify-content: spacebetween;
+}
+.card__title { margin: 0; }
+.card__price { color: #495e57; font-weight: 700; }
+.card__desc { margin: 8px 0 16px; color: #444; }
+/* simple responsive grid */
+.highlights__row { display: grid; gap: var(--gap); grid-template-columns:
+repeat(auto-fit, minmax(240px, 1fr)); max-width: var(--max); margin: 0 auto; }

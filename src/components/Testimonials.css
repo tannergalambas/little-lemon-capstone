@@ -1,0 +1,30 @@
+.testimonials {
+    background: #f8f9fa;
+    margin-top: 40px;
+    padding: 24px 16px;
+  }
+  
+  .testimonials__grid {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  
+  .review {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 16px;
+  }
+  
+  .review__text {
+    margin: 8px 0;
+    color: #444;
+  }
+  
+  .review__name {
+    color: #495e57;
+    font-weight: 700;
+  }
