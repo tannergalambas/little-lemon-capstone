@@ -6,7 +6,7 @@ import Reservations from './pages/Reservations';
 import Confirmation from './pages/Confirmation';
 import Menu from './pages/Menu';
 import OrderOnline from './pages/OrderOnline';
-import Login from './pages/Login';
+import Login from "./pages/Login";
 
 export default function App() {
   return (
