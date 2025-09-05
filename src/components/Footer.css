@@ -1,15 +1,48 @@
-.footer{ padding: 28px 0; border-top:1px solid var(--line); }
+.footer{ padding: 32px 0; border-top:1px solid var(--line); background: var(--bg); }
 .footer .container{ }
 .footer__grid{
-  display:grid; gap: 16px;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  display:grid; gap: 20px 24px;
+  grid-template-columns: 2fr repeat(3, minmax(0, 1fr));
+  align-items: start;
 }
 @media (max-width: 900px){
   .footer__grid{ grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px){
-  .footer__grid{ grid-template-columns: 1fr; }
+  .footer__grid{ grid-template-columns: 1fr; gap: 16px; }
 }
-.footer a{ color:var(--text); text-decoration:none; }
+
+/* headings + meta */
+.footer h3{ margin: 0 0 6px; font-size: clamp(18px, 2.6vw, 20px); }
+.footer h4{ margin: 0 0 8px; font-size: clamp(14px, 2.2vw, 16px); color: var(--muted); }
+.footer__meta{ margin: 0; color: var(--muted); }
+
+/* lists & links */
 .footer ul{ list-style:none; padding:0; margin:0; }
 .footer li{ margin: 6px 0; }
+.footer a{ color:var(--text); text-decoration:none; display:inline-block; padding: 2px 0; }
+.footer a:hover, .footer a:focus-visible{ text-decoration: underline; text-underline-offset: 2px; }
+
+/* section spacing on narrow screens for scannability */
+@media (max-width: 560px){
+  .footer__grid > *{ padding-top: 12px; border-top: 1px solid var(--line); }
+  .footer__grid > *:first-child{ border-top: 0; padding-top: 0; }
+}
+
+@media (max-width: 480px) {
+  .footer { padding: 20px 0; }
+}
+
+/* social icons */
+.footer__social{ display:flex; gap:12px; list-style:none; padding:0; margin:0; }
+.footer__social a{ display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:10px; color:var(--text); transition: background .2s ease, color .2s ease; }
+.footer__social a:hover, .footer__social a:focus-visible{ background: var(--line); }
+.footer__social svg{ width:22px; height:22px; fill: currentColor; }
+
+/* brand hover colors */
+.footer__social a.social--instagram:hover, .footer__social a.social--instagram:focus-visible{ background:#E1306C; color:#fff; }
+.footer__social a.social--facebook:hover, .footer__social a.social--facebook:focus-visible{ background:#1877F2; color:#fff; }
+.footer__social a.social--x:hover, .footer__social a.social--x:focus-visible{ background:#000000; color:#fff; }
+
+/* a11y helper */
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }

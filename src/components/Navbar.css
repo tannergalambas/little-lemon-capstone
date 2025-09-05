@@ -16,14 +16,36 @@
 .navbar__links a{ text-decoration:none; color:var(--text); padding:10px 0; display:block; }
 .navbar__links a.active{ font-weight:700; }
 
-@media (max-width: 768px){
-  .navbar__toggle{ display:block; }
-  .navbar__nav{
-    display:none; position:absolute; left:0; right:0; top:56px; background:#fff;
-    border-bottom:1px solid var(--line);
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: block;
   }
-  .navbar__nav.is-open{ display:block; }
-  .navbar__links{ flex-direction:column; gap:0; }
-  .navbar__links li{ border-top:1px solid var(--line); }
-  .navbar__links a{ padding:12px var(--gutter); }
+  .navbar__nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 56px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+  .navbar__nav.is-open {
+    display: block;
+  }
+  .navbar__links {
+    flex-direction: column;
+    gap: 0;
+  }
+  .navbar__links li {
+    border-top: 1px solid var(--line);
+  }
+  .navbar__links a {
+    padding: 12px var(--gutter);
+  }
+
+  /* 🧩 Optional: stack the inner layout vertically if too tight */
+  .navbar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

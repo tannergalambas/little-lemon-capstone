@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Hero.css';
+import heroImg from '../assets/greek-salad.jpeg';
 
 export default function Hero(){
   return (
@@ -11,7 +12,7 @@ export default function Hero(){
           <p className="hero__tagline">Fresh Mediterranean flavors, neighborhood vibes.</p>
           <Link to="/reservations" className="btn">Reserve a table</Link>
         </div>
-        <div className="hero__image" aria-hidden="true" />
+        <img className="hero__image" src={heroImg} alt="Fresh Greek salad with feta, olives, and lemon" />
       </div>
     </section>
   );

@@ -13,8 +13,8 @@ dining experience.
 </p>
 </div>
 <div className="about__images" aria-hidden="true">
-<div className="about__img" />
-<div className="about__img about__img--offset" />
+  <div className="about__img about__img--one" />
+  <div className="about__img about__img--two about__img--offset" />
 </div>
 </div>
 </section>

@@ -3,12 +3,12 @@ import './Highlights.css';
 
 import greekSaladImg from '../assets/greek-salad.jpeg';
 import bruschettaImg from '../assets/bruschetta.jpeg';
-import lemonDessertImg from '../assets/lemon-dessert.png';
+import greekSaladAltImg from '../assets/greek-salad-alt.jpeg';
 
 const specials = [
   { id: 1, name: 'Greek Salad', price: 12.99, description: 'Crisp lettuce, feta, olives, lemon vinaigrette.', image: greekSaladImg },
   { id: 2, name: 'Bruschetta', price: 5.99, description: 'Grilled bread, tomatoes, garlic, basil.', image: bruschettaImg },
-  { id: 3, name: 'Lemon Dessert', price: 4.99, description: 'House favorite, zesty and sweet.', image: lemonDessertImg },
+  { id: 3, name: 'Seasonal Salad', price: 10.99, description: 'Market greens, herbs, and a citrus vinaigrette.', image: greekSaladAltImg },
 ];
 
 export default function Highlights() {

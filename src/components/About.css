@@ -1,7 +1,9 @@
 .about { max-width: var(--max); margin: 40px auto; padding: 0 16px; }
 .about__grid { display:grid; grid-template-columns: 1fr; gap: 16px; }
 .about__images { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.about__img { height: 160px; background:#e9ecef; border-radius: 14px; }
+.about__img { height: 160px; background:#e9ecef; border-radius: 14px; background-size: cover; background-position: center; }
+.about__img--one{ background-image: url('../assets/greek-salad.jpeg'); }
+.about__img--two{ background-image: url('../assets/bruschetta.jpeg'); }
 .about__img--offset { transform: translateY(12px); }
 @media (min-width: 900px) {
 .about__grid { grid-template-columns: 1.2fr .8fr; align-items:center; }

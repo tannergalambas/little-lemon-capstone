@@ -1,4 +1,5 @@
 .testimonials{ background:#f8f9fa; padding: 24px 0; }
+.testimonials h2{ text-align:center; max-width: var(--max); margin: 0 auto 12px; padding: 0 var(--gutter); }
 .testimonials__grid{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
@@ -13,3 +14,12 @@
 .review{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px; }
 .review__text{ margin: 8px 0; color: var(--muted); }
 .review__name{ color: var(--brand); font-weight:700; }
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 16px 0;
+  }
+  .review {
+    padding: 12px;
+  }
+}
