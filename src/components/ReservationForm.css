@@ -1,4 +1,70 @@
-.res-form { display:grid; gap: 10px; }
-.res-form__error { color: #b00020; font-weight: 600; }
-.res-form input, .res-form select { padding: 10px; border-radius: 10px; border:
-1px solid #ccc; }
+/* Reservation Section Wrapper */
+.reservation-section {
+  padding: 40px 16px;
+  background: #fff;
+}
+
+.reservation-section .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Reservation Form Styles */
+.res-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.res-form h2 {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+/* Grid for fields */
+.form-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 680px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Inputs and selects */
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* Error message */
+.res-form__error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -4px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  min-height: 44px;
+  background: var(--accent);
+  border: none;
+  border-radius: 12px;
+  color: var(--text);
+  font-weight: bold;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #f2cc0c; /* slightly darker yellow for hover */
+}

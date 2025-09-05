@@ -1,26 +1,46 @@
-:root { --gap: 16px; --max: 1100px; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sansserif;
-line-height: 1.5; color: #1a1a1a; }
-main { display: block; padding: 24px 16px; }
-.app-shell { display: grid; min-height: 100dvh; grid-template-rows: auto 1fr
-auto; }
-.page { max-width: var(--max); margin: 0 auto; }
-.page--narrow { max-width: 640px; margin: 24px auto; }
-.btn { display: inline-block; padding: 10px 16px; border-radius: 10px;
-background: #f4ce14; border: none; text-decoration: none; color: #1a1a1a; fontweight:
-600; }
-.btn--secondary { background: #495e57; color: #fff; }
-/* cards */
-.card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px
-solid #eee; }
-.card__img { height: 140px; background: #e9ecef; }
-.card__body { padding: 16px; }
-.card__row { display: flex; align-items: baseline; justify-content: spacebetween;
-}
-.card__title { margin: 0; }
-.card__price { color: #495e57; font-weight: 700; }
-.card__desc { margin: 8px 0 16px; color: #444; }
-/* simple responsive grid */
-.highlights__row { display: grid; gap: var(--gap); grid-template-columns:
-repeat(auto-fit, minmax(240px, 1fr)); max-width: var(--max); margin: 0 auto; }
+:root{
+    --max: 1100px;
+    --gutter: 16px;
+    --radius: 14px;
+  
+    --brand: #495e57;
+    --accent: #f4ce14;
+    --text: #1a1a1a;
+    --muted: #444;
+    --card: #fff;
+    --line: #eee;
+    --bg: #ffffff;
+  }
+  
+  *{ box-sizing: border-box; }
+  html, body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+  img{ max-width:100%; height:auto; display:block; }
+  
+  .container{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  
+  /* type scales nicely on mobile */
+  h1{ font-size: clamp(24px, 3.2vw, 36px); margin: 0 0 8px; }
+  h2{ font-size: clamp(20px, 2.6vw, 28px); margin: 0 0 12px; }
+  p, li, a, button, input, select{
+    font-size: clamp(14px, 2.2vw, 16px);
+    line-height: 1.45;
+  }
+  
+  /* buttons */
+  .btn{
+    display:inline-block; text-decoration:none; cursor:pointer;
+    background: var(--accent); color: var(--text);
+    border: 0; border-radius: 12px; padding: 10px 14px; font-weight: 600;
+  }
+  .btn--secondary{
+    background: var(--brand); color:#fff;
+    border-radius: 10px; padding: 9px 12px;
+  }
+  
+  /* helpful utility if you need it */
+  .hidden-sm{ display: initial; }
+  @media (max-width: 768px){ .hidden-sm{ display: none; } }

@@ -18,8 +18,13 @@ export default function Highlights() {
         <h2 id="highlights-title">This week's specials</h2>
         <a className="btn" href="/order-online">Order online</a>
       </div>
+      
       <div className="highlights__row" role="list">
-        {specials.map(item => <SpecialsCard key={item.id} item={item} />)}
+        {specials.map(item => (
+          <div key={item.id} className="highlight-card" role="listitem">
+            <SpecialsCard item={item} />
+          </div>
+        ))}
       </div>
     </section>
   );
